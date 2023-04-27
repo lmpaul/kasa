@@ -5,8 +5,6 @@ import styles from './Home.module.css'
 
 function Home() {
 
-  // const accomodations = JSON.parse(data)
-
   return(
     <>
       <Banner></Banner>
