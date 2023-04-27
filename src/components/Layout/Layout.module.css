@@ -1,3 +1,6 @@
-.red {
-  color: red;
+.layout {
+  width: calc(100vw - 100px);
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
