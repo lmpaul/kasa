@@ -1,0 +1,35 @@
+.card {
+  height: 350px;
+  width: calc(30% - 20px);
+  color: white;
+  border-radius: 10px;
+  position: relative;
+  margin: 20px 10px;
+  overflow: hidden;
+  background-color: red;
+}
+
+.radiant {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.01));
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.card p {
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
+  width: 80%;
+  z-index: 3;
+}

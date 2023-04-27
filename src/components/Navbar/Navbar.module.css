@@ -1,11 +1,15 @@
 @import '../../style/colors.css';
 
 .navbar {
-  width: 100%;
+  width: calc(100vw - 100px);
   height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  background-color: white;
+  z-index: 10;
+  margin: 0 auto;
 }
 
 .navbar__logo-container img {

@@ -1,0 +1,15 @@
+.banner--homepage {
+  height: 220px;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0,0.5)),
+    url('../../assets/images/home-banner.png');
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+  border-radius: 24px;
+}

@@ -7,7 +7,9 @@ function Layout({children}) {
   return (
     <div className={styles.layout}>
       <Navbar />
-      <Outlet />
+      <div className={styles.container}>
+        <Outlet />
+      </div>
       <Footer />
     </div>
   )
