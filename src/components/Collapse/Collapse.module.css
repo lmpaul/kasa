@@ -50,7 +50,8 @@
   animation-duration: 300ms;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards; */
-  transition: height 300ms ease-in-out;
+  height: auto;
+  transition: all 300ms ease-in-out;
 }
 
 .collapse__body--close {
@@ -59,8 +60,8 @@
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards; */
   height: 0px;
-  transition: height 300ms ease-in-out;
   overflow: hidden;
+  transition: all 300ms ease-in-out;
 }
 
 .collapse__content {
