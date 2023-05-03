@@ -22,7 +22,7 @@ const routerConfig = [
             element: <About />
           },
         ],
-        errorElement: <Error />
+        errorElement: <Error/>
       },
     ]
 

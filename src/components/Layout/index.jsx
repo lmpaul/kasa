@@ -9,6 +9,7 @@ function Layout({children}) {
       <Navbar />
       <div className={styles.container}>
         <Outlet />
+        {children}
       </div>
       <Footer />
     </div>
