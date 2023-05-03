@@ -46,18 +46,21 @@
 }
 
 .collapse__body--open {
-  animation-name: slide-down;
+  /* animation-name: slide-down;
   animation-duration: 300ms;
   animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
+  transition: height 300ms ease-in-out;
 }
 
 .collapse__body--close {
-  animation-name: slide-up;
+  /* animation-name: slide-up;
   animation-duration: 300ms;
   animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
   height: 0px;
+  transition: height 300ms ease-in-out;
+  overflow: hidden;
 }
 
 .collapse__content {
