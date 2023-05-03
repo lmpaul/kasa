@@ -1,0 +1,74 @@
+@import '../../style/colors.css';
+
+@keyframes slide-down {
+  from {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  to {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+
+  to {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+}
+
+
+.collapse {
+  margin: 10px auto;
+}
+
+.collapse__title {
+  background-color: var(--color-primary);
+  color: white;
+  width: calc(100% - 32px);
+  font-size: 24px;
+  padding: 8px 16px;
+  border-radius: 4px 4px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collapse__title img {
+  transition: all 300ms ease-in-out;
+}
+
+.collapse__body--open {
+  animation-name: slide-down;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.collapse__body--close {
+  animation-name: slide-up;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  height: 0px;
+}
+
+.collapse__content {
+  height: 100%;
+  background-color: #f6f6f6;
+  color: var(--color-primary);
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
