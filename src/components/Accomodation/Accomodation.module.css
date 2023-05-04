@@ -1,0 +1,40 @@
+@import '../../style/colors.css';
+
+.container {
+  color: var(--color-primary);
+  width: 100%;
+}
+
+.tags-container {
+  display: flex;
+}
+
+.tag {
+  font-size: 0.8rem;
+  padding: 5px;
+  background-color: var(--color-primary);
+  border-radius: 16px;
+  color: white;
+  margin-right: 10px;
+}
+
+.split-container {
+  width: 100%;
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+}
+
+.split-container .col {
+  width: 48%
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.host-container {
+  display: flex;
+}
