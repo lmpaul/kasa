@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import accomodations from '../../data/data.json'
 import styles from './Accomodation.module.css'
 import Collapse from '../Collapse'
+import Slider from '../Slider'
 
 function Accomodation() {
 
@@ -14,7 +15,7 @@ function Accomodation() {
     const rightAccomodation = accomodations.find(accomodation => accomodation.id === id)
     setAccomodation(rightAccomodation)
     setIsLoading(false)
-  })
+  }, [])
 
   if (isLoading) {
     return(
@@ -23,6 +24,7 @@ function Accomodation() {
   } else {
     return(
       <div className={styles.container}>
+        <Slider images={accomodation.pictures} />
         <div className={styles['split-container']}>
           <div>
             <h1>{accomodation.title}</h1>
