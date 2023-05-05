@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import accomodations from '../../data/data.json'
 import styles from './Accomodation.module.css'
 import Collapse from '../Collapse'
 import Slider from '../Slider'
 
 function Accomodation() {
+
+  const navigate = useNavigate()
 
   const [isLoading, setIsLoading] = useState(true)
   const [accomodation, setAccomodation] = useState({})
@@ -13,9 +16,13 @@ function Accomodation() {
     const splitUrl = window.location.href.split('/')
     const id = splitUrl[splitUrl.length - 1]
     const rightAccomodation = accomodations.find(accomodation => accomodation.id === id)
-    setAccomodation(rightAccomodation)
-    setIsLoading(false)
-  }, [])
+    if (rightAccomodation) {
+      setAccomodation(rightAccomodation)
+      setIsLoading(false)
+    } else {
+      navigate('/error')
+    }
+  }, [navigate])
 
   if (isLoading) {
     return(
@@ -30,8 +37,8 @@ function Accomodation() {
             <h1>{accomodation.title}</h1>
             <p>{accomodation.location}</p>
             <div className={styles['tags-container']}>
-              {accomodation.tags.map((tag) => (
-                <p className={styles.tag}>{tag}</p>
+              {accomodation.tags.map((tag, index) => (
+                <p key={index} className={styles.tag}>{tag}</p>
               ))}
             </div>
           </div>

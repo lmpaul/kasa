@@ -12,8 +12,8 @@ function Home() {
         <p>Chez vous, partout et ailleurs</p>
       </Banner>
       <div className={styles['cards-container']}>
-        {data.map(accomodation => (
-            <Card id={accomodation.id} title={accomodation.title} cover={accomodation.cover}/>
+        {data.map((accomodation, index) => (
+            <Card key={index} id={accomodation.id} title={accomodation.title} cover={accomodation.cover}/>
         ))}
       </div>
     </>
