@@ -8,7 +8,6 @@ function Slider({images}) {
   const [imageIndex, setImageIndex] = useState(0)
 
   const handleRightArrowClick = () => {
-    console.log(images.length)
     if (imageIndex < images.length - 1 ) {
       setImageIndex(imageIndex + 1)
     } else if (imageIndex === images.length - 1) {
@@ -29,9 +28,16 @@ function Slider({images}) {
       <div onClick={handleLeftArrowClick} className={`${styles['slider__arrow-container']} ${styles['slider__left-arrow']}`}>
         <img src={LeftArrow} alt="flèche vers la gauche"/>
       </div>
-      <img src={images[imageIndex]} alt="accomodation" className={styles['slider__picture']}/>
+      {images.map((image, index) => (
+        <img id={`slide-${index}`} src={images[imageIndex]} alt="accomodation"
+        className={index === imageIndex ? styles['slider__active-picture'] : styles['slider__picture']}
+        />
+      ))}
       <div onClick={handleRightArrowClick} className={`${styles['slider__arrow-container']} ${styles['slider__right-arrow']}`}>
         <img src={RightArrow} alt="flèche vers la droite" />
+      </div>
+      <div className={styles['slider__counter']}>
+        <p>{imageIndex + 1}/{images.length}</p>
       </div>
     </div>
   )
