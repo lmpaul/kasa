@@ -37,4 +37,7 @@
 
 .host-container {
   display: flex;
+  width: 130px;
+  justify-content: space-between;
+  align-items: center;
 }

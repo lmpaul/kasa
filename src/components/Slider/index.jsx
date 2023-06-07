@@ -29,7 +29,7 @@ function Slider({images}) {
         <img src={LeftArrow} alt="flèche vers la gauche"/>
       </div>
       {images.map((image, index) => (
-        <img id={`slide-${index}`} src={images[imageIndex]} alt="accomodation"
+        <img key={index} id={`slide-${index}`} src={images[imageIndex]} alt="accomodation"
         className={index === imageIndex ? styles['slider__active-picture'] : styles['slider__picture']}
         />
       ))}

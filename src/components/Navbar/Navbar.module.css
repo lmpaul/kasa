@@ -14,12 +14,22 @@
 
 .navbar__logo-container img {
   width: 70px;
+  cursor: pointer;
 }
 
-.navbar__links-container a {
+.navbar__links-container {
+  display: flex;
+}
+
+.navbar__links-container p {
   margin: 0 10px;
   color: var(--color-primary);
   text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar__links-container p:hover {
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {

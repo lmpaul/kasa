@@ -4,6 +4,7 @@ import accomodations from '../../data/data.json'
 import styles from './Accomodation.module.css'
 import Collapse from '../Collapse'
 import Slider from '../Slider'
+import {ReactComponent as Star} from '../../assets/images/star.svg';
 
 function Accomodation() {
 
@@ -47,14 +48,19 @@ function Accomodation() {
               <p>{accomodation.host.name}</p>
               <img className={styles.avatar} src={accomodation.host.picture} alt="host avatar" />
             </div>
+            <div>
+              {Array.from(Array(5).keys()).map(num => (
+                  <Star key={num} fill={ num <= parseInt(accomodation.rating) ? '#FF6060' : '#E3E3E3'}/>
+              ))}
+            </div>
           </div>
         </div>
         <div className={styles['split-container']}>
           <div className={styles.col}>
-            <Collapse title='Description' text={accomodation.description} margin={false}/>
+            <Collapse title='Description' type='text' text={accomodation.description} margin={false}/>
           </div>
           <div className={styles.col}>
-            <Collapse title='Description' text={accomodation.description} margin={false}/>
+            <Collapse title='Équipements' type='array' array={accomodation.equipments} margin={false}/>
           </div>
         </div>
       </div>

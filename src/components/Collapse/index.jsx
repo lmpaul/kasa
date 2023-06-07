@@ -2,7 +2,7 @@ import styles from './Collapse.module.css'
 import { useState } from 'react'
 import Arrow from '../../assets/images/arrow.png'
 
-function Collapse({title, text, margin}) {
+function Collapse({title, type, text, array, margin}) {
 
   const [isOpen, setIsOpen] = useState(false)
 
@@ -18,7 +18,11 @@ function Collapse({title, text, margin}) {
       </div>
         <div className={isOpen ? styles['collapse__body--open'] : styles['collapse__body--close']}>
           <div className={styles['collapse__content']}>
-            {text}
+            {type === 'array' ?
+            array.map((item, index) => ( <p key={index}>{item}</p>))
+            :
+            <p>{text}</p>
+            }
           </div>
         </div>
     </div>

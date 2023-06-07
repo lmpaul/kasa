@@ -24,6 +24,8 @@
   margin-bottom: 50px;
 }
 
-.container a {
-  color: var(--color-primary)
+.link {
+  color: var(--color-primary);
+  cursor: pointer;
+  text-decoration: underline;
 }

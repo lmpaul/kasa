@@ -73,6 +73,10 @@
   border-radius: 0px 0px 4px 4px;
 }
 
+.collapse__content p {
+  margin: 4px 0;
+}
+
 .rotated {
   transform: rotate(180deg);
 }
