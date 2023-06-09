@@ -50,7 +50,7 @@ function Accomodation() {
             </div>
             <div>
               {Array.from(Array(5).keys()).map(num => (
-                  <Star key={num} fill={ num <= parseInt(accomodation.rating) ? '#FF6060' : '#E3E3E3'}/>
+                  <Star key={num} fill={ num + 1 <= parseInt(accomodation.rating) ? '#FF6060' : '#E3E3E3'}/>
               ))}
             </div>
           </div>
