@@ -13,7 +13,10 @@ function Home() {
       </Banner>
       <div className={styles['cards-container']}>
         {data.map((accomodation, index) => (
-            <Card key={index} id={accomodation.id} title={accomodation.title} cover={accomodation.cover}/>
+            <Card key={index} id={accomodation.id}
+                  title={accomodation.title}
+                  cover={accomodation.cover}
+            />
         ))}
       </div>
     </>

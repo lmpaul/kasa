@@ -23,7 +23,7 @@ function Accomodation() {
     } else {
       navigate('/error')
     }
-  }, [navigate])
+  }, [])
 
   if (isLoading) {
     return(
