@@ -3,7 +3,7 @@ import styles from './Slider.module.css'
 import RightArrow from '../../assets/images/right-arrow.png'
 import LeftArrow from '../../assets/images/left-arrow.png'
 
-function Slider({images}) {
+function Slider({images, displayArrows}) {
 
   const [imageIndex, setImageIndex] = useState(0)
 
@@ -25,17 +25,21 @@ function Slider({images}) {
 
   return (
     <div className={styles.slider}>
-      <div onClick={handleLeftArrowClick} className={`${styles['slider__arrow-container']} ${styles['slider__left-arrow']}`}>
-        <img src={LeftArrow} alt="flèche vers la gauche"/>
-      </div>
+      {displayArrows &&
+        <div onClick={handleLeftArrowClick} className={`${styles['slider__arrow-container']} ${styles['slider__left-arrow']}`}>
+          <img src={LeftArrow} alt="flèche vers la gauche"/>
+        </div>
+      }
       {images.map((image, index) => (
         <img key={index} id={`slide-${index}`} src={images[imageIndex]} alt="accomodation"
         className={index === imageIndex ? styles['slider__active-picture'] : styles['slider__picture']}
         />
       ))}
-      <div onClick={handleRightArrowClick} className={`${styles['slider__arrow-container']} ${styles['slider__right-arrow']}`}>
-        <img src={RightArrow} alt="flèche vers la droite" />
-      </div>
+      {displayArrows &&
+        <div onClick={handleRightArrowClick} className={`${styles['slider__arrow-container']} ${styles['slider__right-arrow']}`}>
+          <img src={RightArrow} alt="flèche vers la droite" />
+        </div>
+      }
       <div className={styles['slider__counter']}>
         <p>{imageIndex + 1}/{images.length}</p>
       </div>

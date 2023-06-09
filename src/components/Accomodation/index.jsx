@@ -32,7 +32,7 @@ function Accomodation() {
   } else {
     return(
       <div className={styles.container}>
-        <Slider images={accomodation.pictures} />
+        <Slider images={accomodation.pictures} displayArrows={accomodation.pictures.length > 1}/>
         <div className={styles['split-container']}>
           <div>
             <h1>{accomodation.title}</h1>
